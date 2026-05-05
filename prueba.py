@@ -14,23 +14,24 @@ while pais<1 or pais>2:
 
 
 if peso<500:
-    print("-lata normal")
+    peso="-lata normal"
 elif peso>501 and peso<1500:
-    print("-lata mediana")
+    peso="-lata mediana"
 elif peso>1501:
-    print("-lata grande")
+    peso="-lata grande"
 elif peso<0:
-    print("-numero invalido")
+    peso="-numero invalido"
 
 if sodio<5:
-    print("-lata normal")
+    sodio="-lata normal"
 elif sodio>5 and sodio<8:
-    print("-lata especial")
+    sodio="lata especial"
 elif sodio>9:
-    print("-lata acorazada")
+    sodio="-lata acorazada"
 
 if pais==1:
-    print("-has elegido la lata nacional")
+    pais="-lata nacional"
 elif pais==2:
-    print("-has elegido la lata internacional (con sticker sanitario)")
+    pais="-lata internacional (con sticker sanitario)"
 
+print(f"{peso}/{sodio}/{pais}")
