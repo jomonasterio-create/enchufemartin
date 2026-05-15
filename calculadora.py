@@ -1,4 +1,3 @@
-import tkinter as tk
 
 # Función para actualizar la pantalla
 def click_boton(valor):
