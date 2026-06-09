@@ -10,7 +10,7 @@ def muestraFruta():
 
 def agregarFruta():
     nuevaF = input("Ingrese el fruta a ingresar: ")
-    frutas.append(nuevaF)
+    frutas[list(frutas.items())[-1][0]+1]=nuevaF
 
 def eliminarFruta():
     muestraFruta()
