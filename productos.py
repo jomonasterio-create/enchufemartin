@@ -4,6 +4,7 @@ productos={
     3:{"nombre": "sandia","precio": 3000},
 }
 
+carrito=[]
 def mostrarpr():
         print("-"*20)
         c=1
@@ -24,8 +25,42 @@ def actualizarprod():
     nuevaprr = input("Ingrese el nuevo producto: ")
 
     productos[opc-1] = nuevaprr
+def coomprarprod():
+    while True:
+        mostrarpr()
+        try:
+            comprar=int(input("Cual producto desea comprar ? para salir apriete (0): "))
+            if comprar == 0:
+                break
+            if comprar in productos:
 
+                print(f"Usted ha comprado {productos[comprar]['nombre']} por un valor de {productos[comprar]['precio']}")
 
+                carrito.append(productos[comprar])
+            else:
+                print("PRODUCTO NO EXISTE!!!")
+        except ValueError:
+                print("ingrese un numero valido")
+def boletaaa():        
+  total=0
+
+  for p in carrito:
+
+    try:
+
+      total+=int(p["precio"])
+
+      
+
+    except (ValueError, TypeError):
+
+      print(f"Precio inválido para {p.get('nombre','?')}, contando como 0")
+
+  iva=total*0.19
+
+  print(f"El total de su compra es {total} y el IVA es {iva}")
+
+  print(f"El total a pagar es {total+iva} ")
 
 
 
@@ -50,4 +85,6 @@ while True:
         case 4:
               mostrarpr()
         case 5:
-              print("")
+              coomprarprod()
+        case 6:
+              boletaaa()
