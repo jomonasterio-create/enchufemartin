@@ -49,11 +49,7 @@ while True:
                 
             case 2:
                 
-                dicc["nombre"]=nombre
-                dicc["previcion"]=previocion
-                dicc["temperatura"]=temperatura
-                dicc["grave"]=temp(temperatura)
-
+                print(f"{pelic}")
 
 
                 for i in dicc:
